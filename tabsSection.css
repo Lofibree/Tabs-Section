@@ -16,17 +16,13 @@ body {
 }
 
 .videoBox {
-    display: block;
-    margin-bottom: 2rem;
-    width: 100%;
-    border-radius: 0.5rem;
-    object-fit: cover;
-    height: 30rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
-.videoBox .video {
-    display: block;
-    width: 500px;
+.videoBox iframe{
+    margin: 0 auto;
 }
 
 
@@ -68,7 +64,7 @@ body {
 }
 @media (min-width:992px) {
     .videoBox {
-        margin-bottom: 0;
+        display: block;
     }
     .tabsSection {
         display: grid;

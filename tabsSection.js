@@ -4,7 +4,7 @@ class Tabs {
         this.btns = [];
         this.articles = [];
         this.element = null;
-        this.video = null;
+        this.iframe = null;
 
         this.start = function (elId) {
             var that = this;
@@ -13,7 +13,7 @@ class Tabs {
             this.tabs = elId.querySelector('.buttonsTextBox');
             this.btns = elId.querySelectorAll('.buttonStep');
             this.articles = elId.querySelectorAll('.content');
-            this.video = elId.querySelector('.video');
+            this.iframe = elId.querySelector('.iframe');
 
             this.tabs.addEventListener('click', (event) => {
                 const id = event.target.dataset.id;
@@ -30,11 +30,11 @@ class Tabs {
                     element.classList.add('live');
 
                     if (id === 'step1') {
-                        that.video.setAttribute('src', './videos/videoleha1.mp4');
+                        that.iframe.setAttribute('src', 'https://www.youtube.com/embed/z0nZAXyF2BU');
                     } else if (id === 'step2') {
-                        that.video.setAttribute('src', './videos/seva.mp4');
+                        that.iframe.setAttribute('src', 'https://www.youtube.com/embed/MYlSg2Ay3ic');
                     } else if (id === 'step3') {
-                        that.video.setAttribute('src', './videos/lofi.mp4');
+                        that.iframe.setAttribute('src', 'https://www.youtube.com/embed/_r0vlyp33pw');
                     };
                 };
             });
