@@ -15,6 +15,7 @@ class Tabs {
             this.articles = elId.querySelectorAll('.content');
             this.iframe = elId.querySelector('.iframe');
 
+
             this.tabs.addEventListener('click', (event) => {
                 const id = event.target.dataset.id;
                 const element = elId.querySelector('#' + id);
